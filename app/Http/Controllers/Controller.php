@@ -9,5 +9,8 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+	use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+
+	public function dashboard(){ return view("dashboard")->with("name", "Dashboard"); }
+	public function feed(){ return view("feed")->with("name", "Feed"); }
 }
