@@ -25,7 +25,7 @@
 			<div class="bg-white shadow">
 				<div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
 					<h2 class="font-semibold text-xl text-gray-800 leading-tight inline">
-						Dashboard
+						{{ $name }}
 					</h2>
 					<a class="w-auto shadow bg-indigo-500 hover:bg-indigo-400 text-white py-2 px-4 rounded float-right font-bold"
 						href="/posts/create" role="button">+ New Post</a>

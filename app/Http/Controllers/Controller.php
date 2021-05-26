@@ -11,6 +11,6 @@ class Controller extends BaseController
 {
 	use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-	public function dashboard(){ return view("dashboard")->with("name", "Dashboard"); }
-	public function feed(){ return view("feed")->with("name", "Feed"); }
+	public function dashboard()	{ return view("dashboard"); }
+	public function feed()		{ return view("feed"); }
 }

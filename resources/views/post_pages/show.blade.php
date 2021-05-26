@@ -1,5 +1,6 @@
 @php
 	if(Auth::check()) $layout = "layouts/app"; else $layout = "layouts/home";
+	$name = "Post: Display";
 @endphp
 @extends($layout)
 @section("content")

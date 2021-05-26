@@ -1,15 +1,16 @@
 @if(auth()->user()->id == $user_id)
-	@extends("layouts.app")
-	@section("content")
-		@php
+	@php
 		$label_style	= "block text-gray-500 font-bold float-right pr-4 align-top";
 		$text_style		= "bg-gray-100 rounded w-1/3 text-gray-700 leading-tight focus:bg-white";
 		$textarea_style	= "bg-gray-100 rounded w-auto text-gray-700 leading-tight focus:bg-white resize";
 		$button_style	= "w-24 shadow bg-indigo-500 hover:bg-indigo-400 text-white font-bold py-2 px-4
-						   rounded text-center cursor-pointer";
+						rounded text-center cursor-pointer";
 		$save_btn_attr	= [ "class" => $button_style, "name" => "action" ];
 		$cancel_btn_attr= [ "class" => $button_style, "name" => "action" ];
-		@endphp
+		$name			= "Post: Create";
+	@endphp
+	@extends("layouts.app")
+	@section("content")
 		{!! Form::open(["action" => "PostPagesController@store", "method" => "post", "enctype" => "multipart/form-data", auth()->user()->id]) !!}
 			{{ Form::token() }}
 			<table class="table-auto" >
